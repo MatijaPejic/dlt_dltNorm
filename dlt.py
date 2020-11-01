@@ -49,5 +49,5 @@ def DLT(p1, p2):
 
 
 res = DLT(p1, p2)
-print("Matrica preslikavanja:")
+print("Transform matrix:")
 print(res)
