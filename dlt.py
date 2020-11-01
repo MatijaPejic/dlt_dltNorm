@@ -1,5 +1,6 @@
 import numpy as np
 
+#Exaomple input
 np.set_printoptions(suppress=True)
 np.set_printoptions(precision=5)
 a = np.array([-3, 2, 1])
@@ -20,7 +21,7 @@ p1 = np.array([a, b, c, d, e, f, g])
 p2 = np.array([a1, b1, c1, d1, e1, f1, g1])
 
 
-def DLP(p1, p2):
+def DLT(p1, p2):
     A = []
     for pair in zip(p1, p2):
         M = pair[0]
@@ -47,6 +48,6 @@ def DLP(p1, p2):
     return np.array(x)
 
 
-res = DLP(p1, p2)
+res = DLT(p1, p2)
 print("Matrica preslikavanja:")
 print(res)
