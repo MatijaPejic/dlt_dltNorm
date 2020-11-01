@@ -1,6 +1,6 @@
 import numpy as np
 import math
-
+#Example input
 np.set_printoptions(suppress=True)
 np.set_printoptions(precision=6)
 a = np.array([-3, 2, 1])
@@ -20,6 +20,7 @@ g1 = np.array([8, 4, 4])
 p1 = np.array([a, b, c, d, e, f, g])
 p2 = np.array([a1, b1, c1, d1, e1, f1, g1])
 
+#Creating the needed 2D and 3D arrays
 M3d = []
 for point in p1:
     M3d.append(point / point[2])
@@ -41,7 +42,7 @@ for point in M3d:
 M2d = np.array(M2d)
 
 
-def DLP(p1, p2):
+def DLT(p1, p2):
     A = []
     for pair in zip(p1, p2):
         M = pair[0]
@@ -92,9 +93,10 @@ def Normalization(x):
 
     return Tr, transformed_matrix
 
-#DLT sa normalizacijom
+#DLT with Normalization 
 T, M_nad = Normalization(M2d)
 Tp, Mp_nad = Normalization(Mp2d)
-P_nad = DLP(M_nad, Mp_nad)
+P_nad = DLT(M_nad, Mp_nad)
 P = np.dot(np.linalg.inv(Tp), np.dot(P_nad, T))
+print("Transoform matrix:")
 print(P)
