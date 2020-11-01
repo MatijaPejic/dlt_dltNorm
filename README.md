@@ -1,2 +1,2 @@
 # dlt_dltNorm
-DLT algorithm in python
+DLT and DLT Normalization algorithms in python
