@@ -1,6 +1,6 @@
 import numpy as np
 
-#Exaomple input
+#Example input
 np.set_printoptions(suppress=True)
 np.set_printoptions(precision=5)
 a = np.array([-3, 2, 1])
